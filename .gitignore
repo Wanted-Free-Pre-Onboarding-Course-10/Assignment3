@@ -131,6 +131,6 @@ dmypy.json
 .idea
 
 #local db disk
-db
+db/
 # env
 .env
