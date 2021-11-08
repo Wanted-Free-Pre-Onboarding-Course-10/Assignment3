@@ -5,6 +5,7 @@ from flask_jwt_extended import JWTManager
 from apispec import APISpec
 from apispec.ext.marshmallow import MarshmallowPlugin
 from flask_apispec import FlaskApiSpec
+import redis
 
 import config
 
@@ -14,6 +15,7 @@ migrate = Migrate()
 
 def create_app(test_config=None):
     app = Flask(__name__)
+
     if test_config ==None:
         app.config.from_object(config)
     else:
@@ -58,6 +60,7 @@ def create_app(test_config=None):
 
     return app
 
+redis_cache = redis.Redis(host='localhost', port=6379, db=0)
 
 app = create_app()
 
