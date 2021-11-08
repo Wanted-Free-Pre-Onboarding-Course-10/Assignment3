@@ -1,2 +1,2 @@
 # Assignment3
-Wanted-Free-Pre-Onboarding-Course-10/Assignment3
+원티드 프리 온보딩 2주차 기업형 과제(원티드)
