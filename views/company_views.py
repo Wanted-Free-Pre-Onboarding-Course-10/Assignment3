@@ -1,17 +1,19 @@
 from flask import Blueprint
 from service import company_service
-
-# from serializers.auth import AuthRequestSchema, TokenSchema
+from flask_apispec import marshal_with, use_kwargs, doc
+from serializers.company import CompanyRequestSchema
 
 bp = Blueprint('company', __name__, url_prefix='/company')
 
 @bp.route('/', methods=['GET'])
+@marshal_with(CompanyRequestSchema)
 def getAllCompanies():
     result = company_service.getAllCompanies()
 
     return result;
 
 @bp.route('/', methods=['POST'])
+@use_kwargs(CompanyRequestSchema)
 def createCompany(name_ko, name_en, name_ja):
     companies = company_service.createCompany(name_ko, name_en, name_ja)
 

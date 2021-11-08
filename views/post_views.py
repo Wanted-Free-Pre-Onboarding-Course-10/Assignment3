@@ -13,7 +13,7 @@
 # def post_list():
 #     page = request.args.get('page', type=int, default=1)
 #     return post_service.get_post_list(page)
-#
+
 #
 # @doc(tags=['post'], description='식별자에 해당하는 게시글을 반환한다.')
 # @bp.route('/detail/<int:post_id>/')
