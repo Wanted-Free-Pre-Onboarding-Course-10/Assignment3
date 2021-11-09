@@ -5,9 +5,13 @@ import redis
 import os
 
 import config
+# import logging
+
+# logging.basicConfig()
 
 db = SQLAlchemy()
 migrate = Migrate()
+# logging.getLogger('sqlalchemy.engine').setLevel(logging.INFO)
 
 
 def create_app(test_config=None):
@@ -24,13 +28,14 @@ def create_app(test_config=None):
     from model import models
 
     # 블루프린트
-    from views import  company_views, autocomplete_views
-    app.register_blueprint(company_views.bp)
-    app.register_blueprint(autocomplete_views.bp)
 
-    @app.errorhandler(404)
-    def page_not_found(error):
-        return make_response(jsonify(msg="없는 페이지 입니다. 아마 존재하지 않는 게시글 id로 요청을 보내셨을 가능성이 높습니다.", status_code=404),404)
+    from views import autocomplete_views, company_views
+    app.register_blueprint(autocomplete_views.bp)
+    app.register_blueprint(company_views.bp)
+
+    # @app.errorhandler(404)
+    # def page_not_found(error):
+    #     return make_response(jsonify(msg="없는 페이지 입니다. 아마 존재하지 않는 게시글 id로 요청을 보내셨을 가능성이 높습니다.", status_code=404),404)
 
     return app
 

@@ -7,7 +7,6 @@ from app import redis_cache
 bp = Blueprint('autocomplete', __name__, url_prefix='/search')
 
 @bp.route('/', methods=['GET'])
-# @marshal_with(AutoCompleteResponseSchema(many=True))
 def autoComplete():
     # 회사이름 자동완성을 위한 query parameter(query)
     query = request.args.get('query')
