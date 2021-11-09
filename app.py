@@ -2,11 +2,8 @@ from flask import Flask, jsonify, make_response
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 import redis
-<<<<<<< HEAD
-=======
 import os
 
->>>>>>> 67ff408f1b6fa84f3f159be090c152a926e70778
 import config
 
 db = SQLAlchemy()
