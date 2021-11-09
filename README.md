@@ -47,6 +47,9 @@
 ## API 테스트
 1. 우측 링크를 클릭해서 postman으로 들어갑니다.[링크](https://www.postman.com/martian-satellite-348039/workspace/10/overview) 
 2. 정의된 flask가 올바른지 확인 합니다.(3.36.88.48:5000)
+<img width="723" alt="스크린샷 2021-11-10 오전 5 32 50" src="https://user-images.githubusercontent.com/81801012/141000285-8968f83b-4210-4fb8-a935-a04ad2e6433f.png">
+
+
 3. 이후, API 테스트를 시도해 주세요.
 
 ## 설치 및 실행 방법
