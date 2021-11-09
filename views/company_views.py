@@ -38,7 +38,7 @@ def companies():
     return jsonify(response)
 
 @bp.route('/test', methods=['POST'])
-def companies():
+def test():
     result = request.get_json()
 
     for r in result:
