@@ -19,7 +19,8 @@
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white" />&nbsp; <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=Docker&logoColor=white" />&nbsp; <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=Flask&logoColor=white" /> &nbsp; <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=Redis&logoColor=white" /> &nbsp; <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=Postman&logoColor=white" />  &nbsp; <img src="https://img.shields.io/badge/AWS%20EC2-232F3E?style=flat-square&logo=Amazon%20AWS&logoColor=white" />
 
 ## DB 스키마
-![KakaoTalk_Photo_2021-11-09-17-36-01-1](https://user-images.githubusercontent.com/81801012/140890286-687b5eb0-dd25-4c10-a4fb-f84a7bde3f9e.png)
+![원티드 랩 Assignment3 (2)](https://user-images.githubusercontent.com/67785334/140938418-f31e37d2-cd69-4f58-81ff-cd05ecb8a7cc.png)
+
 
 ## 문제정의 및 시퀀스 다이어그램
 
