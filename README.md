@@ -52,6 +52,42 @@
 
 ## 설치 및 실행 방법
 
+### 프로젝트 설치
+
+```bash
+git clone https://github.com/Wanted-Free-Pre-Onboarding-Course-10/Assignment3.git
+```
+
+ ### 환경 구축
+
+```bash
+#윈도우#
+python -m venv venv
+
+source venv/Scripts/activate
+
+pip install -r requirements.txt
+```
+
+```bash
+#맥#
+python -m venv venv
+
+source venv/bin/activate
+
+pip install -r requirements.txt
+```
+
+```shell
+flask db init
+flask db migrate
+flask db upgrade
+```
+
+```shell
+flask run
+```
+
 
 ## 팀원
 
