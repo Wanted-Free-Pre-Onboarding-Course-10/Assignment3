@@ -53,7 +53,7 @@ def getOneCompanyByCompanyIdAndLanguageType(companyId, language):
 
 def getTagsByCompanyIdAndTagName(companyId, language):
     return db.session.query(TagName) \
-        .join(CompanyTagName, CompanyTagName.company_id == TagName.company_id).filter(
+        .join(CompanyTagName, CompanyTagName.tag_id == TagName.id).filter(
         and_(
             TagName.type == language,
             CompanyTagName.company_id == companyId
