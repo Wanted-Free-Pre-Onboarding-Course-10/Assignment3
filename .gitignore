@@ -127,15 +127,3 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-
-.idea
-
-db
-
-wantedDB
-#local db disk
-db/
-# env
-.env
-# migrations
-migrations/
