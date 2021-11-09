@@ -121,7 +121,7 @@ flask run
 
 
 **3. 새로운 회사 추가 API**
-[바로가기]()
+[바로가기](https://github.com/Wanted-Free-Pre-Onboarding-Course-10/Assignment3/wiki/%EC%83%88%EB%A1%9C%EC%9A%B4-%ED%9A%8C%EC%82%AC-%EC%B6%94%EA%B0%80-%EA%B8%B0%EB%8A%A5)
 
 **4. 캐싱 전략**
 [바로가기](https://github.com/Wanted-Free-Pre-Onboarding-Course-10/Assignment3/wiki/%EC%BA%90%EC%8B%B1%EC%A0%84%EB%9E%B5)
