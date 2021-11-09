@@ -19,6 +19,8 @@ def createCompany(requestCompanies, requestTags):
     for company in requestCompanies:
         type = company
         name = requestCompanies[company]
+        if name == '':
+            continue
 
         redis_cache.sadd(name, type)
 
@@ -31,6 +33,8 @@ def createCompany(requestCompanies, requestTags):
             for t in tag[item]:
                 type = t
                 name = tag[item][t]
+                if name == '':
+                    continue
                 findTagName = company_repository.findTagNameByNameAndType(name, type);
                 tagId = 1;
                 print("findTagAme : ")
