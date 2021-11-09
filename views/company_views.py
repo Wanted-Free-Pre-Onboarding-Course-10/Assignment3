@@ -24,7 +24,11 @@ def getAllCompanies():
 def createCompany(company_ko, company_en, company_ja):
     companies = company_service.createCompany(company_ko, company_en, company_ja)
 
-    redis_cache.set(company_ko, company_en)
+    # redis_cache.
+    redis_cache.set(company_ko, company_ko)
+    redis_cache.set(company_en, company_en)
+    redis_cache.set(company_ja, company_ja)
+
     print(company_ko + " " + company_en)
     print("레디스에 저장")
     return companies;
