@@ -126,7 +126,7 @@ flask run
 **4. 캐싱 전략**
 [바로가기](https://github.com/Wanted-Free-Pre-Onboarding-Course-10/Assignment3/wiki/%EC%BA%90%EC%8B%B1%EC%A0%84%EB%9E%B5)
 
-## 테스트 결과
+## 테스트 
 
 ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/44861205/140997102-281d4194-ded8-47aa-ad13-abcaea2d1d43.gif)
 
