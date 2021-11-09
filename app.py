@@ -2,6 +2,11 @@ from flask import Flask, jsonify, make_response
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 import redis
+<<<<<<< HEAD
+=======
+import os
+
+>>>>>>> 67ff408f1b6fa84f3f159be090c152a926e70778
 import config
 
 db = SQLAlchemy()
@@ -22,9 +27,10 @@ def create_app(test_config=None):
     from model import models
 
     # 블루프린트
-    from views import tag_views, company_views
+    from views import tag_views, company_views, autocomplete_views
     app.register_blueprint(company_views.bp)
     app.register_blueprint(tag_views.bp)
+    app.register_blueprint(autocomplete_views.bp)
 
     @app.errorhandler(404)
     def page_not_found(error):
@@ -32,7 +38,7 @@ def create_app(test_config=None):
 
     return app
 
-redis_cache = redis.Redis(host='localhost', port=6379, db=0)
+redis_cache = redis.Redis(host=os.getenv('MYSQL_HOST'), port=os.getenv('REDIS_PORT'), db=0)
 
 app = create_app()
 
