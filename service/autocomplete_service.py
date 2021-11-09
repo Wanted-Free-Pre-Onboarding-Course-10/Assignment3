@@ -9,7 +9,9 @@ def autoComplete(query, language):
         if byte2str(redis_cache.get(key)) == language:
             result.append(byte2str(key))
 
+
     return result;
 
 def byte2str(byte):
     return byte.decode('utf-8')
+
