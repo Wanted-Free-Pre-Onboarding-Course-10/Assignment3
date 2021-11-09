@@ -29,7 +29,7 @@
 | ------ | 
 | [회사명 자동완성](https://github.com/Wanted-Free-Pre-Onboarding-Course-10/Assignment3/wiki/%EB%AC%B8%EC%A0%9C-%EC%A0%95%EC%9D%98) |
 | [회사 이름으로 회사 검색]() | 
-| [새로운 회사 추가]() |  
+| [새로운 회사 추가](https://github.com/Wanted-Free-Pre-Onboarding-Course-10/Assignment3/wiki/%EB%AC%B8%EC%A0%9C%EC%A0%95%EC%9D%98(%EC%83%88%EB%A1%9C%EC%9A%B4-%ED%9A%8C%EC%82%AC-%EC%B6%94%EA%B0%80)) |  
 
 
 ## 과제 구현사항
