@@ -42,7 +42,7 @@
 
 
 ## API
-[API문서]()
+[API문서](https://documenter.getpostman.com/view/13568025/UVC5F87D)
 
 ## API 테스트
 1. 우측 링크를 클릭해서 postman으로 들어갑니다.[링크](https://www.postman.com/martian-satellite-348039/workspace/10-api/overview) 
