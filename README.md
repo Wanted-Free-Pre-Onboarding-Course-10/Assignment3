@@ -58,6 +58,11 @@ git clone https://github.com/Wanted-Free-Pre-Onboarding-Course-10/Assignment3.gi
 ```
 
  ### 환경 구축
+ 
+ ```bash
+ #도커 환경 구축#
+ docker-compose up
+ ```
 
 ```bash
 #윈도우#
