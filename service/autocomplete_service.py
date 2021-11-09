@@ -1,5 +1,5 @@
 from app import redis_cache
-
+from repository import autocomplete_respository
 def autoComplete(query, language):
     result = []
 
@@ -15,3 +15,8 @@ def autoComplete(query, language):
 def byte2str(byte):
     return byte.decode('utf-8')
 
+
+
+def RDBautoComplete(query, language):
+    result = autocomplete_respository.findCompanyName(query, language)
+    return result

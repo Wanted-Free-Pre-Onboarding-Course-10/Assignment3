@@ -26,3 +26,19 @@ def autoComplete():
 
     print(response)
     return jsonify(response)
+
+
+
+@bp.route('/rdb', methods=['GET'])
+def RDBautoComplete():
+    # 회사이름 자동완성을 위한 query parameter(query)
+    query = request.args.get('query')
+    language = request.headers.get('x-wanted-language')
+    result = autocomplete_service.RDBautoComplete(query, language)
+    response = []
+    for value in result:
+        print(value)
+        converter = {'company_name' : value.name}
+        response.append(converter)
+
+    return jsonify(response)
