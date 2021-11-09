@@ -27,8 +27,7 @@
 
 | 문제 정의 | 
 | ------ | 
-| [회사명 자동완성](https://github.com/Wanted-Free-Pre-Onboarding-Course-10/Assignment3/wiki/%EB%AC%B8%EC%A0%9C-%EC%A0%95%EC%9D%98) |
-| [회사 이름으로 회사 검색]() | 
+| [회사 이름으로 회사 검색 & 회사명 자동완성](https://github.com/Wanted-Free-Pre-Onboarding-Course-10/Assignment3/wiki/%EB%AC%B8%EC%A0%9C-%EC%A0%95%EC%9D%98(%ED%9A%8C%EC%82%AC%EB%AA%85-%EC%9E%90%EB%8F%99%EC%99%84%EC%84%B1,-%ED%9A%8C%EC%82%AC-%EA%B2%80%EC%83%89)) |
 | [새로운 회사 추가](https://github.com/Wanted-Free-Pre-Onboarding-Course-10/Assignment3/wiki/%EB%AC%B8%EC%A0%9C%EC%A0%95%EC%9D%98(%EC%83%88%EB%A1%9C%EC%9A%B4-%ED%9A%8C%EC%82%AC-%EC%B6%94%EA%B0%80)) |  
 
 
@@ -125,7 +124,7 @@ flask run
 [바로가기]()
 
 **4. 캐싱 전략**
-[바로가기]()
+[바로가기](https://github.com/Wanted-Free-Pre-Onboarding-Course-10/Assignment3/wiki/%EC%BA%90%EC%8B%B1%EC%A0%84%EB%9E%B5)
 
 ## 테스트 결과
 
