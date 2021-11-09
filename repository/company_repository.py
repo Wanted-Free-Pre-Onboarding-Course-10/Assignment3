@@ -1,4 +1,6 @@
-from model.models import Company, CompanyName, TagName
+from sqlalchemy import and_
+
+from model.models import Company, CompanyName, TagName, CompanyTagName
 from app import db
 
 def createCompany():
@@ -13,8 +15,24 @@ def createCompanyName(id, type, name):
     db.session.add(companyName)
     db.session.commit()
 
-def createTagName(id, type, name):
-    tagName = TagName(type=type,name=name,company_id=id)
+def createTagName(type, name):
+    tagName = TagName(type=type,name=name)
     db.session.add(tagName)
     db.session.commit()
 
+    return tagName
+
+def createCompanyTagName(company_id, tag_id):
+    companyTagName = CompanyTagName(company_id=company_id,tag_id=tag_id)
+    db.session.add(companyTagName)
+    db.session.commit()
+
+    return companyTagName
+
+# 이름으로 tag Name조회
+def findTagNameByNameAndType(name, type):
+    findtagNameResult = db.session.query(TagName) \
+        .filter(and_(TagName.name == name, TagName.type == type)) \
+        .first()
+
+    return findtagNameResult
