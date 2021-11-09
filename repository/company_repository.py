@@ -1,4 +1,6 @@
-from model.models import Company, CompanyName, TagName
+from sqlalchemy import and_
+
+from model.models import Company, CompanyName, TagName, CompanyTagName
 from app import db
 
 def createCompany():
@@ -18,3 +20,26 @@ def createTagName(id, type, name):
     db.session.add(tagName)
     db.session.commit()
 
+def getOneCompanyByCompanyName(query):
+    return db.session.query(CompanyName, Company) \
+        .join(Company, Company.id == CompanyName.company_id) \
+        .filter(CompanyName.name.like(f"%{query}%")) \
+        .all()
+
+def getOneCompanyByCompanyIdAndLanguageType(companyId, language):
+    return db.session.query(CompanyName) \
+        .filter(
+        and_(
+            CompanyName.company_id == companyId,
+            CompanyName.type == language
+        )) \
+        .first()
+
+def getTagsByCompanyIdAndTagName(companyId, language):
+    return db.session.query(TagName) \
+        .join(CompanyTagName, CompanyTagName.company_id == TagName.company_id).filter(
+        and_(
+            TagName.type == language,
+            CompanyTagName.company_id == companyId
+        )
+    ).all()
