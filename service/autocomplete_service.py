@@ -5,10 +5,9 @@ def autoComplete(query, language):
 
    # 레디스에서 해당 쿼리가 prefix인 모든 key 찾기
     for key in redis_cache.scan_iter(f"*{query}*"):
-        # 요청온 언어와 같은 언어(value)의 key들만 result에 담는다.
-        if byte2str(redis_cache.get(key)) == language:
-            result.append(byte2str(key))
-
+        for value_language in redis_cache.smembers(key):
+            if language == byte2str(value_language):
+                result.append(byte2str(key))
 
     return result;
 

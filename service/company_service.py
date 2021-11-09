@@ -8,12 +8,10 @@ def createCompany(requestCompanies, requestTags):
 
     # CompanyName 저장
     for company in requestCompanies:
-
         type = company
         name = requestCompanies[company]
 
-        # redis에 key(회사 이름), value(언어) 추가
-        redis_cache.set(name, type)
+        redis_cache.sadd(name, type)
 
         # db에 저장
         company_repository.createCompanyName(id, type, name)
