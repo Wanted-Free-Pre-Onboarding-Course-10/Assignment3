@@ -90,12 +90,12 @@ flask run
 
 ## 팀원
 
-| 이름   | github                                          | 담당 역할                  |
-| ------ | ----------------------------------------------- | -------------------------- |
-| 박지율 | [earthkingman](https://github.com/earthkingman) | 자동 완성 API, 도커 컨테이너 환경 설정 |
-| 염재선 | [Yeom Jae Seon](https://github.com/YeomJaeSeon) | 자동 완성 API, 개발 환경 설정  |
-| 김태희 | [김태희](https://github.com/godtaehee)            | 회사 추가 API, 테스팅         |
-| 박상엽 | [큰형](  https://github.com/lotus0204)            | 검색 API,테스팅          |
+| 이름   | github                                          | 담당 역할                  | 회고록             |
+| ------ | ----------------------------------------------- | -------------------------- |------------------|
+| 박지율 | [earthkingman](https://github.com/earthkingman) | 자동 완성 API, 도커 컨테이너 환경 설정 |                |
+| 염재선 | [Yeom Jae Seon](https://github.com/YeomJaeSeon) | 자동 완성 API, 개발 환경 설정  |                     |
+| 김태희 | [김태희](https://github.com/godtaehee)            | 회사 추가 API, 테스팅         |                    |
+| 박상엽 | [큰형](  https://github.com/lotus0204)            | 검색 API,테스팅          |                       |
 
 ## 개발 일정
 
