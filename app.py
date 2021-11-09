@@ -1,12 +1,7 @@
 from flask import Flask, jsonify, make_response
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
-# from flask_jwt_extended import JWTManager
-from apispec import APISpec
-from apispec.ext.marshmallow import MarshmallowPlugin
-from flask_apispec import FlaskApiSpec
 import redis
-
 import config
 
 db = SQLAlchemy()
@@ -21,38 +16,15 @@ def create_app(test_config=None):
     else:
         app.config.from_object(config.Testing)
 
-    apispec = APISpec(
-        title='preonboard',
-        version='v1',
-        openapi_version='2.0',
-        plugins=[MarshmallowPlugin()],
-    )
-    app.config.update({
-        'APISPEC_SPEC': apispec
-    })
-    docs = FlaskApiSpec(app=app, document_options=False)
-
     # ORM
     db.init_app(app)
     migrate.init_app(app, db)
     from model import models
 
     # 블루프린트
-    from views import post_views, company_views
+    from views import tag_views, company_views
     app.register_blueprint(company_views.bp)
-    # app.register_blueprint(auth_views.bp)
-
-    # jwt
-    # jwt = JWTManager(app)
-
-    # docs.register(post_views.post_list, blueprint=post_views.bp.name)
-    # docs.register(post_views.create, blueprint=post_views.bp.name)
-    # docs.register(post_views.modify, blueprint=post_views.bp.name)
-    # docs.register(post_views.detail, blueprint=post_views.bp.name)
-    # docs.register(post_views.delete, blueprint=post_views.bp.name)
-    #
-    # docs.register(auth_views.signup, blueprint=com.bp.name)
-    # docs.register(auth_views.login, blueprint=auth_views.bp.name)
+    app.register_blueprint(tag_views.bp)
 
     @app.errorhandler(404)
     def page_not_found(error):
