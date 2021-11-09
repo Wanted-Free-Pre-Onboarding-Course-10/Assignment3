@@ -26,12 +26,11 @@ def createCompanies():
     return jsonify(result)
 
 
-@bp.route('/', methods=['GET'])
-def companies():
-    query = request.args.get('query')
+@bp.route('/<companyName>', methods=['GET'])
+def companies(companyName):
 
     language = request.headers.get('x-wanted-language')
-    response = company_service.getOneCompany(query, language)
+    response = company_service.getOneCompany(companyName, language)
 
     print(response)
 
