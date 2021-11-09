@@ -21,7 +21,9 @@ def createCompanies():
     # 요청헤더에 담긴 언어 조회 - language에 맞는
     language = request.headers.get('x-wanted-language')
 
-    return "hi"
+    result = company_service.findCompanyNameAndTagsByLanguage(savedId, language)
+
+    return jsonify(result)
 
 
 @bp.route('/', methods=['GET'])
@@ -34,3 +36,15 @@ def companies():
     print(response)
 
     return jsonify(response)
+
+@bp.route('/test', methods=['POST'])
+def companies():
+    result = request.get_json()
+
+    for r in result:
+        requestCompanies = r['company_name'];
+        requestTags = r['tags'];
+        company_service.createCompany(requestCompanies, requestTags)
+
+    return "test데이터 잘들어갔습니다.";
+
