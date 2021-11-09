@@ -15,7 +15,12 @@
 - 새로운 회사 추가
 - 데이터 셋 [wanted_temp_data.csv](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/81f13ae2-fabc-4fad-a754-9b2d684f41a8/wanted_temp_data.csv)
 - 제공되는 test case를 통과할 수 있도록 개발해야 합니다. [test_app.py](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0d2517b3-b80b-4a1b-82c4-9bc6f2a0d5ae/test_app.py)
+
+## DB 스키마
+![KakaoTalk_Photo_2021-11-09-17-36-01-1](https://user-images.githubusercontent.com/81801012/140890286-687b5eb0-dd25-4c10-a4fb-f84a7bde3f9e.png)
+
 ## 과제 구현사항
+
 
 
 ## API
