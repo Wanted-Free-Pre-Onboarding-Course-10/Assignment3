@@ -6,6 +6,7 @@ from apispec import APISpec
 from apispec.ext.marshmallow import MarshmallowPlugin
 from flask_apispec import FlaskApiSpec
 import redis
+import os
 
 import config
 
@@ -60,7 +61,7 @@ def create_app(test_config=None):
 
     return app
 
-redis_cache = redis.Redis(host='localhost', port=6379, db=0)
+redis_cache = redis.Redis(host=os.getenv('MYSQL_HOST'), port=os.getenv('REDIS_PORT'), db=0)
 
 app = create_app()
 

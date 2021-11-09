@@ -2,11 +2,11 @@
 from app import db
 from model.models import Company
 
-def createCompany(name_ko, name_en, name_ja, created_at):
+def createCompany(company_ko, company_en, company_ja, created_at):
     company = Company(
-        name_ko=name_ko,
-        name_en=name_en,
-        name_ja=name_ja,
+        company_ko=company_ko,
+        company_en=company_en,
+        company_ja=company_ja,
         created_at=created_at
     )
 

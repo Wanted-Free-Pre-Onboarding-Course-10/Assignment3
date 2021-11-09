@@ -21,19 +21,21 @@ def getAllCompanies():
 
 @bp.route('/', methods=['POST'])
 @use_kwargs(CompanyRequestSchema)
-def createCompany(name_ko, name_en, name_ja):
-    companies = company_service.createCompany(name_ko, name_en, name_ja)
+def createCompany(company_ko, company_en, company_ja):
+    companies = company_service.createCompany(company_ko, company_en, company_ja)
 
-    redis_cache.set(name_ko, name_en)
+    redis_cache.set(company_ko, company_en)
+    print(company_ko + " " + company_en)
+    print("레디스에 저장")
     return companies;
 
 @bp.route('/find', methods=['POST'])
 @use_kwargs(CompanyRequestSchema)
-def findCompanies(name_ko, name_en, name_ja):
-    companies = company_service.createCompany(name_ko, name_en, name_ja)
+def findCompanies(company_ko, company_en, company_ja):
+    companies = company_service.createCompany(company_ko, company_en, company_ja)
 
-    if redis_cache.exists(name_ko):
-        print(redis_cache.get(name_ko))
+    if redis_cache.exists(company_ko):
+        print(redis_cache.get(company_ko))
     else:
         print("해당 키의 값 없음")
     # print(redis_cache.get())
