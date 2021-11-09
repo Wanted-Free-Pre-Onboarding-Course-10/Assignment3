@@ -5,9 +5,7 @@ from werkzeug.security import generate_password_hash
 
 def createCompany(name_ko, name_en, name_ja):
     date = datetime.now()
-
     company_repository.createCompany(name_ko, name_en, name_ja, date)
-
     return "회사 생성 성공";
 
 def getAllCompanies():
