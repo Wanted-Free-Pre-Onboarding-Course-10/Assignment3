@@ -54,13 +54,20 @@ def getOneCompany(query, language):
 
     companyNameResult = company_repository.getOneCompanyByCompanyName(query)
 
+    for a,b in companyNameResult:
+        print(a)
+        print(b)
+
     if len(companyNameResult) == 0:
         abort(404, '찾는 회사가 없습니다.')
 
     resultArray = []
+    duplicate = []
 
     for queryResult in companyNameResult:
         companyId = queryResult.Company.id
+        if companyId in duplicate: continue
+        duplicate.append(companyId)
         print(companyId)
         company = company_repository.getOneCompanyByCompanyIdAndLanguageType(companyId, language)
 
