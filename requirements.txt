@@ -31,3 +31,5 @@ webargs==8.0.1
 Werkzeug==2.0.2
 WTForms==2.3.3
 redis==3.4.1
+mysql-connector-python
+python-dotenv
