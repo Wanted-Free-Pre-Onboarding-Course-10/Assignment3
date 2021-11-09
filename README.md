@@ -46,7 +46,7 @@
 
 ## API 테스트
 1. 우측 링크를 클릭해서 postman으로 들어갑니다.[링크](https://www.postman.com/martian-satellite-348039/workspace/10/overview) 
-2. 정의된 server가 올바른지 확인 합니다.()
+2. 정의된 flask가 올바른지 확인 합니다.(3.36.88.48:5000)
 3. 이후, API 테스트를 시도해 주세요.
 
 ## 설치 및 실행 방법
