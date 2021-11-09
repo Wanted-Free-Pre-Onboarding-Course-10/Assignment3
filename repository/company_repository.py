@@ -7,7 +7,6 @@ def createCompany(company_ko, company_en, company_ja, created_at):
         company_ko=company_ko,
         company_en=company_en,
         company_ja=company_ja,
-        created_at=created_at
     )
 
     db.session.add(company)

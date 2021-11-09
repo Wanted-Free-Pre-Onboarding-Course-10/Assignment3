@@ -8,4 +8,4 @@ def autoComplete(prefix):
     for key in cache.scan_iter(f"{prefix}*"):
         result.append(key.decode('utf-8'))
 
-    return result;
+    return result

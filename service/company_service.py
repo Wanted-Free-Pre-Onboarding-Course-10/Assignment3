@@ -4,8 +4,7 @@ from flask_jwt_extended import create_access_token
 from werkzeug.security import generate_password_hash
 
 def createCompany(company_ko, company_en, company_ja):
-    date = datetime.now()
-    company_repository.createCompany(company_ko, company_en, company_ja, date)
+    company_repository.createCompany(company_ko, company_en, company_ja)
     return "회사 생성 성공";
 
 def getAllCompanies():
