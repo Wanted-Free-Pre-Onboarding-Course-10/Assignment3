@@ -35,20 +35,22 @@ def createCompany(requestCompanies, requestTags):
                 tagId = 1;
 
                 if findTagName == None:
-                    #해당 이름과 타입의 태그이름이 태그 테이블에 없으면
+                    # 해당 이름과 타입의 태그이름이 태그 테이블에 없으면
                     tagId = company_repository.createTagName(type, name).id
                 else:
-                    #해당 이름의 태그이름이 있으면
+                    # 해당 이름의 태그이름이 있으면
                     tagId = findTagName.id
 
                 # CompanyTagName 저장
                 company_repository.createCompanyTagName(id, tagId)
 
-
     # Company id 리턴
     return id
 
+
 def getOneCompany(query, language):
+    if query == '':
+        abort(404, '잘못된 요청입니다.')
 
     companyNameResult = company_repository.getOneCompanyByCompanyName(query)
 
@@ -59,15 +61,16 @@ def getOneCompany(query, language):
 
     for queryResult in companyNameResult:
         companyId = queryResult.Company.id
+        print(companyId)
         company = company_repository.getOneCompanyByCompanyIdAndLanguageType(companyId, language)
 
         tagResult = company_repository.getTagsByCompanyIdAndTagName(companyId, language)
 
         tags = []
 
+        idx = 0
         for tag in tagResult:
-            tags.append(tag.name)
-
+            tags.append({f"tag{idx}": tag.name})
 
         result = {
             "company_name": company.name,
@@ -77,4 +80,3 @@ def getOneCompany(query, language):
         resultArray.append(result)
 
     return resultArray
-

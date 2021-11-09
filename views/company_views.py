@@ -31,4 +31,6 @@ def companies():
     language = request.headers.get('x-wanted-language')
     response = company_service.getOneCompany(query, language)
 
-    return response[0]
+    print(response)
+
+    return jsonify(response)
