@@ -48,15 +48,11 @@ def createCompany(requestCompanies, requestTags):
     return id
 
 
-def getOneCompany(query, language):
-    if query == '':
+def getOneCompany(companyName, language):
+    if companyName == '':
         abort(404, '잘못된 요청입니다.')
 
-    companyNameResult = company_repository.getOneCompanyByCompanyName(query)
-
-    for a,b in companyNameResult:
-        print(a)
-        print(b)
+    companyNameResult = company_repository.getOneCompanyByCompanyName(companyName)
 
     if len(companyNameResult) == 0:
         abort(404, '찾는 회사가 없습니다.')
@@ -68,7 +64,6 @@ def getOneCompany(query, language):
         companyId = queryResult.Company.id
         if companyId in duplicate: continue
         duplicate.append(companyId)
-        print(companyId)
         company = company_repository.getOneCompanyByCompanyIdAndLanguageType(companyId, language)
 
         tagResult = company_repository.getTagsByCompanyIdAndTagName(companyId, language)

@@ -36,10 +36,10 @@ def findTagNameByNameAndType(name, type):
 
     return findtagNameResult
   
-def getOneCompanyByCompanyName(query):
+def getOneCompanyByCompanyName(companyName):
     return db.session.query(CompanyName, Company) \
         .join(Company, Company.id == CompanyName.company_id) \
-        .filter(CompanyName.name.like(f"%{query}%")) \
+        .filter(CompanyName.name.like(f"%{companyName}%")) \
         .all()
 
 def getOneCompanyByCompanyIdAndLanguageType(companyId, language):
