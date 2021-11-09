@@ -23,6 +23,14 @@
 
 ## 문제정의 및 시퀀스 다이어그램
 
+
+| 문제 정의 | 
+| ------ | 
+| [회사명 자동완성](https://github.com/Wanted-Free-Pre-Onboarding-Course-10/Assignment3/wiki/%EB%AC%B8%EC%A0%9C-%EC%A0%95%EC%9D%98) |
+| [회사 이름으로 회사 검색]() | 
+| [새로운 회사 추가]() |  
+
+
 ## 과제 구현사항
 
 
