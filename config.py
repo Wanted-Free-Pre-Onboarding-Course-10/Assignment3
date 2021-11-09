@@ -2,12 +2,20 @@ import os
 
 BASE_DIR = os.path.dirname(__file__)
 
-SQLALCHEMY_DATABASE_URI = 'sqlite:///{}'.format(os.path.join(BASE_DIR, 'bulletin.db'))
+# main db connection - mariadb start ===============
+db = {
+    'user' : os.getenv('MYSQL_USER'),
+    'password' : os.getenv('MYSQL_PASSWORD'),
+    'host' : os.getenv('MYSQL_HOST'),
+    'port' : os.getenv('MYSQL_PORT'),
+    'database' : os.getenv('MYSQL_DATABASE')
+}
+
+SQLALCHEMY_DATABASE_URI = f"mysql+mysqlconnector://{db['user']}:{db['password']}@" \
+         f"{db['host']}:{db['port']}/{db['database']}?charset=utf8"
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-SECRET_KEY = "dev"
-JWT_SECRET_KEY = "super-secret"
-
+#  ================ connection end
 
 class Testing:
     TESTING = True

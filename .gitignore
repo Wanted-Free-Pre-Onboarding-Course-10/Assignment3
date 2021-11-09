@@ -137,4 +137,5 @@ wantedDB
 db/
 # env
 .env
-
+# migrations
+migrations/

@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, make_response
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
-from flask_jwt_extended import JWTManager
+# from flask_jwt_extended import JWTManager
 from apispec import APISpec
 from apispec.ext.marshmallow import MarshmallowPlugin
 from flask_apispec import FlaskApiSpec
@@ -43,7 +43,7 @@ def create_app(test_config=None):
     # app.register_blueprint(auth_views.bp)
 
     # jwt
-    jwt = JWTManager(app)
+    # jwt = JWTManager(app)
 
     # docs.register(post_views.post_list, blueprint=post_views.bp.name)
     # docs.register(post_views.create, blueprint=post_views.bp.name)
