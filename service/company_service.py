@@ -49,8 +49,6 @@ def createCompany(requestCompanies, requestTags):
 
 
 def getOneCompany(companyName, language):
-    if companyName == '':
-        abort(404, '잘못된 요청입니다.')
 
     companyNameResult = company_repository.getOneCompanyByCompanyName(companyName)
 
