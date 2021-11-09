@@ -113,7 +113,7 @@ flask run
 ## 개발 과정
 
 **1.회사명 자동완성 API**
-[바로가기]()
+[바로가기](https://github.com/Wanted-Free-Pre-Onboarding-Course-10/Assignment3/wiki/%ED%9A%8C%EC%82%AC%EC%9D%B4%EB%A6%84-%EC%9E%90%EB%8F%99%EC%99%84%EC%84%B1-%EA%B8%B0%EB%8A%A5)
 
 
 **2. 회사 이름으로 회사 검색 API**
