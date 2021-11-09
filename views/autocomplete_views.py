@@ -21,7 +21,7 @@ def autoComplete():
     response = []
     for value in result:
         print(value)
-        converter = {'company_name' : value};
+        converter = {'company_name' : value}
         response.append(converter)
 
     print(response)

@@ -1,10 +1,11 @@
+import json
+
 from flask import Blueprint, make_response, jsonify, request
-from flask_apispec import marshal_with, use_kwargs, doc
-# from service import post_service
-# from serializers.post import PostSchema, CreatePostRequestSchema
-# from serializers.company import CreateCompanyRequestScheme
+import pprint
 from service import company_service
 
+
+pp = pprint.PrettyPrinter(indent=4)
 bp = Blueprint('companies', __name__, url_prefix='/companies')
 
 @bp.route('/', methods=["POST"])
@@ -21,3 +22,13 @@ def createCompanies():
     language = request.headers.get('x-wanted-language')
 
     return "hi"
+
+
+@bp.route('/', methods=['GET'])
+def companies():
+    query = request.args.get('query')
+
+    language = request.headers.get('x-wanted-language')
+    response = company_service.getOneCompany(query, language)
+
+    return response[0]
