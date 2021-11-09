@@ -39,8 +39,9 @@ def create_app(test_config=None):
     from model import models
 
     # 블루프린트
-    from views import post_views, company_views
+    from views import post_views, company_views, autocomplete_views
     app.register_blueprint(company_views.bp)
+    app.register_blueprint(autocomplete_views.bp)
     # app.register_blueprint(auth_views.bp)
 
     # jwt
