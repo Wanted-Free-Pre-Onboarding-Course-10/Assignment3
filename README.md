@@ -117,7 +117,7 @@ flask run
 
 
 **2. 회사 이름으로 회사 검색 API**
-[바로가기]()
+[바로가기](https://github.com/Wanted-Free-Pre-Onboarding-Course-10/Assignment3/wiki/%ED%9A%8C%EC%82%AC-%EC%9D%B4%EB%A6%84%EC%9C%BC%EB%A1%9C-%ED%9A%8C%EC%82%AC-%EA%B2%80%EC%83%89-%EA%B8%B0%EB%8A%A5)
 
 
 **3. 새로운 회사 추가 API**
