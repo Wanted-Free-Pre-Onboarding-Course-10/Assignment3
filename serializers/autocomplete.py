@@ -2,4 +2,4 @@ from marshmallow import Schema, fields
 from model.models import Company
 
 class AutoCompleteSchema(Schema):
-    prefix = fields.String(allow_none=False)
+    query = fields.String(allow_none=False)
