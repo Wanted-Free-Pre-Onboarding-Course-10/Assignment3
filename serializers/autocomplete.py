@@ -1,5 +1,6 @@
 from marshmallow import Schema, fields
 from model.models import Company
 
-class AutoCompleteSchema(Schema):
-    query = fields.String(allow_none=False)
+class AutoCompleteResponseSchema(Schema):
+    key = "company_name"
+    value = fields.String(allow_none=False)
