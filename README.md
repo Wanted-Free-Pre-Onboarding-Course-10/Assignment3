@@ -128,6 +128,9 @@ flask run
 
 ## 테스트 결과
 
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/44861205/140997102-281d4194-ded8-47aa-ad13-abcaea2d1d43.gif)
+
 ## 회고록
+
 
 
