@@ -31,8 +31,21 @@ def createCompany(requestCompanies, requestTags):
             for t in tag[item]:
                 type = t
                 name = tag[item][t]
-                company_repository.createTagName(id, type, name)
+                findTagName = company_repository.findTagNameByNameAndType(name, type);
+                tagId = 1;
 
+                if findTagName == None:
+                    #해당 이름과 타입의 태그이름이 태그 테이블에 없으면
+                    tagId = company_repository.createTagName(type, name).id
+                else:
+                    #해당 이름의 태그이름이 있으면
+                    tagId = findTagName.id
+
+                # CompanyTagName 저장
+                company_repository.createCompanyTagName(id, tagId)
+
+
+    # Company id 리턴
     return id
 
 def getOneCompany(query, language):
