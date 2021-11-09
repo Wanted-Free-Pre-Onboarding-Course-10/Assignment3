@@ -20,3 +20,8 @@ class CompanyName(db.Model):
     type = db.Column(db.String(200), nullable=False)
     name = db.Column(db.String(200), nullable=False)
     company_id = db.Column(db.ForeignKey('company.id'))
+
+class CompanyTagName(db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    company_id = db.Column(db.ForeignKey('company.id'))
+    tag_id = db.Column(db.ForeignKey('tag_name.id'))

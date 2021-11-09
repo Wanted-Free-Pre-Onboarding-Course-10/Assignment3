@@ -3,6 +3,7 @@ from sqlalchemy import and_
 from model.models import Company
 from model.models import CompanyName
 from model.models import TagName
+from model.models import CompanyTagName
 from repository import company_repository
 from app import redis_cache
 from app import db
@@ -49,10 +50,7 @@ def createCompany(requestCompanies, requestTags):
 
 def getOneCompany(query, language):
 
-    companyNameResult = db.session.query(CompanyName, Company) \
-        .join(Company, Company.id == CompanyName.company_id) \
-        .filter(CompanyName.name.like(f"%{query}%")) \
-        .all()
+    companyNameResult = company_repository.getOneCompanyByCompanyName(query)
 
     if len(companyNameResult) == 0:
         abort(404, '찾는 회사가 없습니다.')
@@ -61,18 +59,9 @@ def getOneCompany(query, language):
 
     for queryResult in companyNameResult:
         companyId = queryResult.Company.id
-        company = db.session.query(CompanyName)\
-            .filter(
-            and_(
-            CompanyName.company_id == companyId,
-            CompanyName.type == language
-        ))\
-            .first()
+        company = company_repository.getOneCompanyByCompanyIdAndLanguageType(companyId, language)
 
-        tagResult = db.session.query(TagName)\
-            .join(Company, Company.id == TagName.company_id).filter(
-                TagName.type == language
-        ).all()
+        tagResult = company_repository.getTagsByCompanyIdAndTagName(companyId, language)
 
         tags = []
 
