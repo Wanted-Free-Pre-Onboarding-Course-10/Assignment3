@@ -102,7 +102,7 @@ flask run
 | 이름   | github                                          | 담당 역할                  | 회고록             |
 | ------ | ----------------------------------------------- | -------------------------- |------------------|
 | 박지율 | [earthkingman](https://github.com/earthkingman) | 자동 완성 API, 도커, 캐싱 전략 |      [회고록](https://velog.io/@earthkingman/20211109%EC%9B%90%ED%8B%B0%EB%93%9C-%ED%94%84%EB%A6%AC%EC%98%A8%EB%B3%B4%EB%94%A9-%EA%B8%B0%EC%97%85%ED%98%95%EA%B3%BC%EC%A0%9C)          |
-| 염재선 | [Yeom Jae Seon](https://github.com/YeomJaeSeon) | 자동 완성 API, 개발 환경 설정, DB 설계, 서버 배포 |                     |
+| 염재선 | [Yeom Jae Seon](https://github.com/YeomJaeSeon) | 자동 완성 API, 개발 환경 설정, DB 설계, 서버 배포 |   [회고록](https://yjs3819.tistory.com/manage/posts/)                  |
 | 김태희 | [김태희](https://github.com/godtaehee)            | 회사 추가 API, 테스팅, DB 설계     |                    |
 | 박상엽 | [큰형](  https://github.com/lotus0204)            | 검색 API, 테스팅, 캐싱 전략           |                       |
 
@@ -139,7 +139,8 @@ flask run
 
 ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/44861205/140997102-281d4194-ded8-47aa-ad13-abcaea2d1d43.gif)
 
-## 회고록
-
-
+## 개발도중 고민들
+- 테이블간의 관계, 다대다 vs 다대일의 고민(<a href="https://github.com/Wanted-Free-Pre-Onboarding-Course-10/Assignment3/wiki/%EB%8B%A4%EB%8C%80%EB%8B%A4-vs-%EC%9D%BC%EB%8C%80%EB%8B%A4">위키 링크</a>)
+- 도커의 도입 (<a href="https://github.com/Wanted-Free-Pre-Onboarding-Course-10/Assignment3/wiki/%EB%8F%84%EC%BB%A4%EC%9D%98-%EB%8F%84%EC%9E%85">위키 링크</a>)
+- 레디스의 도입 (<a href="https://github.com/Wanted-Free-Pre-Onboarding-Course-10/Assignment3/wiki/%EB%A0%88%EB%94%94%EC%8A%A4%EC%9D%98-%EB%8F%84%EC%9E%85">위키 링크</a>)
 
