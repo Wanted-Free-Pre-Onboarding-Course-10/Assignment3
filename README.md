@@ -139,6 +139,8 @@ flask run
 
 ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/44861205/140997102-281d4194-ded8-47aa-ad13-abcaea2d1d43.gif)
 
+gif파일이 너무 커서 풀버전의 gif를 올리지 못하고 있습니다. 해당 gif풀버전은 [김태희](https://github.com/godtaehee)가 가지고 있습니다.
+
 ## 개발도중 고민들
 - 테이블간의 관계, 다대다 vs 다대일의 고민(<a href="https://github.com/Wanted-Free-Pre-Onboarding-Course-10/Assignment3/wiki/%EB%8B%A4%EB%8C%80%EB%8B%A4-vs-%EC%9D%BC%EB%8C%80%EB%8B%A4">위키 링크</a>)
 - 도커의 도입 (<a href="https://github.com/Wanted-Free-Pre-Onboarding-Course-10/Assignment3/wiki/%EB%8F%84%EC%BB%A4%EC%9D%98-%EB%8F%84%EC%9E%85">위키 링크</a>)
