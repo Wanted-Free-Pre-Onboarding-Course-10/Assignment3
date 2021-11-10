@@ -102,7 +102,7 @@ flask run
 | 이름   | github                                          | 담당 역할                  | 회고록             |
 | ------ | ----------------------------------------------- | -------------------------- |------------------|
 | 박지율 | [earthkingman](https://github.com/earthkingman) | 자동 완성 API, 도커, 캐싱 전략 |      [회고록](https://velog.io/@earthkingman/20211109%EC%9B%90%ED%8B%B0%EB%93%9C-%ED%94%84%EB%A6%AC%EC%98%A8%EB%B3%B4%EB%94%A9-%EA%B8%B0%EC%97%85%ED%98%95%EA%B3%BC%EC%A0%9C)          |
-| 염재선 | [Yeom Jae Seon](https://github.com/YeomJaeSeon) | 자동 완성 API, 개발 환경 설정, DB 설계, 서버 배포 |   [회고록](https://yjs3819.tistory.com/manage/posts/)                  |
+| 염재선 | [Yeom Jae Seon](https://github.com/YeomJaeSeon) | 자동 완성 API, 개발 환경 설정, DB 설계, 서버 배포 |   [회고록](https://yjs3819.tistory.com/68)                  |
 | 김태희 | [김태희](https://github.com/godtaehee)            | 회사 추가 API, 테스팅, DB 설계     |        [회고록](https://medium.com/@godtaehee/week-2-wanted-%EA%B3%BC%EC%A0%9C%EB%A5%BC-%EB%A7%88%EC%B9%98%EA%B3%A0-41fa8998a4db)            |
 | 박상엽 | [큰형](  https://github.com/lotus0204)            | 검색 API, 테스팅, 캐싱 전략           |                       |
 
